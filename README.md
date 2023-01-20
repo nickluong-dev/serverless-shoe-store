@@ -1,7 +1,7 @@
 # Serverless Project
 
 ## About
-This is a fully serverless project! The project is hosted using a S3 bucket with CloudFront.
+This is a fully serverless project for my Serverless Cloud and Microservices class. The project is hosted using a S3 bucket with CloudFront.
 The user requests are managed through AWS's API Gateway and Lambda. 
 User data along with the inventory is stored using RDS (MySQL) and DynamoDB. 
 Once an order is placed, SES (Simple Email Service) is triggered to alert the admin (owner) of product purchase. 
@@ -21,6 +21,15 @@ This project is currently not hosted as AWS charges for many of the features imp
 ## Architecture
 ![Image](./architecture.jpg)
 
-The client sends a request to access the website to CloudFront to display the website. From there lambda calls are made through the API Gateway depending on user/ admin requests. Incase there are too many requests made in a very short amount, SQS (Simple Queue Service) manages by acting as a buffer between the producer and the consumer, making sure all messages are delivered. Sending a receipt to the user/ admin once an item is purchased and generating a daily sales report for the admin is all triggered and managed by lambda functions.
+The client sends a request to access the website. Lambda calls are made through API Gateway depending on user/ admin requests. This handles requests to display data, purchase items, or add/update items (for admins). In case there are too many requests made in a very short amount, SQS (Simple Queue Service) acts as a buffer between the producer and the consumer, making sure all messages are delivered. Other Lambda functions send receipts to the user and admin once an item is purchased. Admins are also given daily generated reports.
 
+## Services Used
+- Lambda
+- API Gateway
+- DynamoDB and AWS RDS
+- SES and SNS
+- S3 and Cloudfront
+- CodePipeline, CodeBuild, CodeDeploy
+- Cloudwatch
+- CodeCommit
 <sub>Refer/ download architecture pdf <a href="https://github.com/ogharambae/serverless_shoe_store/blob/master/architecture.jpg">here</a>.</sub>
