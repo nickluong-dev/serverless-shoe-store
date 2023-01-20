@@ -32,4 +32,3 @@ The client sends a request to access the website. Lambda calls are made through 
 - CodePipeline, CodeBuild, CodeDeploy
 - Cloudwatch
 - CodeCommit
-<sub>Refer/ download architecture pdf <a href="https://github.com/ogharambae/serverless_shoe_store/blob/master/architecture.jpg">here</a>.</sub>
