@@ -1,27 +1,15 @@
 # Serverless Project
 
-
-## Table of Contents
-
-<ol>
-  <li><a href="#about">About</a></li>
-  <li><a href="#project-status">Project Status</a></li>
-  <li><a href="#built-with">Built With</a></li>
-  <li><a href="#architecture">Architecture</a></li>
-</ol>
-
 ## About
-A fully serverless project using AWS microservices! The website is hosted using a S3 bucket, with CloudFront for faster delivery, as it is a static website. 
-The users' requests are managed through AWS's API Gateway and lambda calls. 
+This is a fully serverless project! The project is hosted using a S3 bucket with CloudFront.
+The user requests are managed through AWS's API Gateway and Lambda. 
 User data along with the inventory is stored using RDS (MySQL) and DynamoDB. 
 Once an order is placed, SES (Simple Email Service) is triggered to alert the admin (owner) of product purchase. 
 A log of daily sales is also generated using SNS (Simple Notification Service).
 
-<i>The frontend is created using basic react templates as this wasn't the focus of the project. </i>
-
 ## Project Status
 
-This project is currently offline as the account used to set up the project is no longer available. Also, as most AWS services charge the user, the project cannot be indefinitely online.
+This project is currently not hosted as AWS charges for many of the features implemented.
 
 ## Built With
 
