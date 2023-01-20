@@ -1,5 +1,5 @@
 # Serverless Project
-
+![Image](./shoe.jpg)
 ## About
 This is a fully serverless project for my Serverless Cloud and Microservices class. The project is hosted using a S3 bucket with CloudFront.
 The user requests are managed through AWS's API Gateway and Lambda. 
